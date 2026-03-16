@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "recommended_stt": "Qwen3-ASR-0.6B (MLX)",
+  "recommended_diarize": "pyannote 화자분리 v3.1",
+  "models": [
+    {
+      "name": "Qwen3-ASR-0.6B (MLX)",
+      "category": "stt",
+      "pip": "mlx-qwen3-asr",
+      "size": "~600MB",
+      "speed": "15분→42초",
+      "quality": "좋음 (추천)",
+      "import_check": "mlx_qwen3_asr"
+    },
+    {
+      "name": "SenseVoice Small",
+      "category": "stt",
+      "pip": "funasr",
+      "size": "~234MB",
+      "speed": "64초→1.5초",
+      "quality": "좋음",
+      "import_check": "funasr"
+    },
+    {
+      "name": "mlx-whisper large-v3-turbo",
+      "category": "stt",
+      "pip": "mlx-whisper",
+      "size": "~800MB",
+      "speed": "15분→15초",
+      "quality": "최고",
+      "import_check": "mlx_whisper"
+    },
+    {
+      "name": "pyannote 화자분리 v3.1",
+      "category": "diarize",
+      "pip": "pyannote.audio",
+      "size": "~1GB",
+      "speed": "DER ~10%",
+      "quality": "3명+ 회의 (추천)",
+      "import_check": "pyannote.audio"
+    },
+    {
+      "name": "Silero VAD",
+      "category": "diarize",
+      "pip": "silero-vad",
+      "size": "~2MB",
+      "speed": "64초→0.17초",
+      "quality": "음성 구간 검출",
+      "import_check": "silero_vad"
+    }
+  ],
+  "recorder": {
+    "port": 699,
+    "max_segment_seconds": 3600,
+    "max_age_hours": 48
+  }
+}
