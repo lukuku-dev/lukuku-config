@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "name": "필수",
+      "description": "모든 팀원 설치",
+      "tools": [
+        {"name": "Xcode CLI Tools", "install": "xcode-select --install", "check": "xcode-select -p", "type": "shell"},
+        {"name": "Homebrew", "install": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"", "check": "which brew", "type": "shell"},
+        {"name": "Python3", "install": "brew install pyenv && pyenv install 3.12 && pyenv global 3.12", "check": "which python3", "type": "brew", "package": "pyenv"},
+        {"name": "Node.js", "install": "brew install fnm && fnm install --lts && fnm default lts-latest", "check": "which node", "type": "brew", "package": "fnm"},
+        {"name": "Claude Code", "install": "npm install -g @anthropic-ai/claude-code", "check": "which claude", "type": "npm"},
+        {"name": "GitHub CLI", "install": "brew install gh", "check": "which gh", "type": "brew", "package": "gh"},
+        {"name": "FFmpeg", "install": "brew install ffmpeg", "check": "which ffmpeg", "type": "brew", "package": "ffmpeg"},
+        {"name": "ripgrep", "install": "brew install ripgrep", "check": "which rg", "type": "brew", "package": "ripgrep"}
+      ]
+    },
+    {
+      "name": "개발",
+      "description": "개발자 도구",
+      "tools": [
+        {"name": "Docker Desktop", "install": "brew install --cask docker", "check": "which docker", "type": "cask", "package": "docker"},
+        {"name": "AWS CLI", "install": "brew install awscli", "check": "which aws", "type": "brew", "package": "awscli"},
+        {"name": "Helm", "install": "brew install helm", "check": "which helm", "type": "brew", "package": "helm"},
+        {"name": "gcloud CLI", "install": "brew install --cask google-cloud-sdk", "check": "which gcloud", "type": "cask", "package": "google-cloud-sdk"},
+        {"name": "PostgreSQL", "install": "brew install postgresql@14", "check": "which psql", "type": "brew", "package": "postgresql@14"},
+        {"name": "Redis", "install": "brew install redis", "check": "which redis-cli", "type": "brew", "package": "redis"},
+        {"name": "ngrok", "install": "brew install --cask ngrok", "check": "which ngrok", "type": "cask", "package": "ngrok"}
+      ]
+    },
+    {
+      "name": "터미널",
+      "description": "터미널 환경",
+      "tools": [
+        {"name": "Ghostty", "install": "brew install --cask ghostty", "check": "ls /Applications/Ghostty.app", "type": "cask", "package": "ghostty"},
+        {"name": "Neovim", "install": "brew install neovim", "check": "which nvim", "type": "brew", "package": "neovim"},
+        {"name": "Starship", "install": "brew install starship", "check": "which starship", "type": "brew", "package": "starship"},
+        {"name": "zoxide", "install": "brew install zoxide", "check": "which zoxide", "type": "brew", "package": "zoxide"},
+        {"name": "fzf", "install": "brew install fzf", "check": "which fzf", "type": "brew", "package": "fzf"},
+        {"name": "lazygit", "install": "brew install lazygit", "check": "which lazygit", "type": "brew", "package": "lazygit"}
+      ]
+    },
+    {
+      "name": "유틸리티",
+      "description": "생산성 도구",
+      "tools": [
+        {"name": "yt-dlp", "install": "brew install yt-dlp", "check": "which yt-dlp", "type": "brew", "package": "yt-dlp"},
+        {"name": "Maccy", "install": "brew install --cask maccy", "check": "ls /Applications/Maccy.app", "type": "cask", "package": "maccy"},
+        {"name": "mkcert", "install": "brew install mkcert", "check": "which mkcert", "type": "brew", "package": "mkcert"},
+        {"name": "trash", "install": "brew install trash", "check": "which trash", "type": "brew", "package": "trash"}
+      ]
+    },
+    {
+      "name": "STT & AI",
+      "description": "음성인식 · 화자분리",
+      "tools": [
+        {"name": "Qwen3-ASR-0.6B (MLX)", "install": "pip install mlx-qwen3-asr", "check": "python3 -c 'import mlx_qwen3_asr'", "type": "pip", "package": "mlx-qwen3-asr"},
+        {"name": "SenseVoice Small", "install": "pip install funasr", "check": "python3 -c 'import funasr'", "type": "pip", "package": "funasr"},
+        {"name": "mlx-whisper large-v3-turbo", "install": "pip install mlx-whisper", "check": "python3 -c 'import mlx_whisper'", "type": "pip", "package": "mlx-whisper"},
+        {"name": "pyannote 화자분리", "install": "pip install pyannote.audio", "check": "python3 -c 'import pyannote.audio'", "type": "pip", "package": "pyannote.audio"},
+        {"name": "Silero VAD", "install": "pip install silero-vad", "check": "python3 -c 'import silero_vad'", "type": "pip", "package": "silero-vad"}
+      ]
+    }
+  ]
+}
